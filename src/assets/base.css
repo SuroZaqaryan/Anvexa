@@ -1,0 +1,33 @@
+@import './scss/fonts.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: #000;
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  font-family: Raleway-Medium;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+}
+
+.v-enter-active, .v-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.v-enter-from, .v-leave-to {
+  opacity: 0;
+}

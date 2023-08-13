@@ -1,0 +1,26 @@
+@mixin shake-animation($borderColor) {
+  transition: 0.2s;
+  
+  &:hover {
+    border-radius: 68px;
+    animation: shake 0.82s cubic-bezier(.1,.1,.1,.1) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+    box-shadow: 0 0 0px 4px unquote($borderColor);
+  }
+
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-0.5px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(0.5px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-0.5px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(0.5px, 0, 0);
+    }
+  }
+}
