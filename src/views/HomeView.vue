@@ -1,10 +1,11 @@
 <script setup>
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
-import { Carousel, Navigation, Slide } from 'vue3-carousel'
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 
 const showSubcontent = ref(false);
+const carouselPublicity = ref(null);
 
 const breakpoints = ref({
   0: {
@@ -27,6 +28,14 @@ const breakpoints = ref({
     snapAlign: 'center',
   },
 })
+
+const next = () => {
+  carouselPublicity.value.next();
+}
+
+const prev = () => {
+  carouselPublicity.value.prev();
+}
 </script>
 
 <template>
@@ -760,16 +769,250 @@ const breakpoints = ref({
       <h3 class="future-title">
         Заглянем немного в <br/> совместное <span>будущее</span>.
       </h3>
+
+      <img class="future-grid" src="@/assets/images/grid.png" />
     </div>
   </section>
 
   <section class="seaction-publicity">
+    <img class="curved-line-rotate" src="@/assets/images/curved-line-rotate.png" />
+ 
     <div class="publicity-wrapper">
-      
+      <div class="publicity-desc">
+        <div class="publicity-images">
+          <img class="ornament" src="@/assets/icons/ornament.svg" />
+          <img class="ornament" src="@/assets/icons/ornament.svg" />
+  
+          <img height="300" src="@/assets/images/publicity-large.png" />
+          <img height="250" src="@/assets/images/publicity-small.png" />
+        </div>
+  
+        <div class="publicity-slider">
+          <Carousel ref="carouselPublicity">
+            <Slide v-for="slide in 10" :key="slide">
+              <div class="carousel__item">
+                <div class="arrow-refresh">
+                  <img src="@/assets/icons/arrow-refresh.svg" />
+                </div>
+                <h3>Автоматическое <br/> обнавление</h3>
+                <p>
+                  Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники 
+                </p>
+              </div>
+            </Slide>
+  
+            <template #addons>
+              <div class="publicity-controls">
+                <div class="publicity-pagination">
+                  <Pagination />
+                </div>
+
+                <div class="publicity-navigation">
+                  <button @click="next">
+                    <img src="@/assets/icons/slider-arrow-left.svg" />
+                  </button>
+                  <button  @click="prev">
+                    <img src="@/assets/icons/slider-arrow-right.svg" />
+                  </button>
+                </div>
+              </div>
+            </template>
+          </Carousel>
+        </div>
+      </div>
     </div>
   </section>
+
+  <section class="section-form">
+    <div class="form-wrapper">
+      <div>
+        <div>
+          <div class="form-info">
+            <span>И это еще не все!</span>
+          </div>
+  
+          <h3 class="form-title">
+            Оставьте заявку и мы <br/>
+            подберем <span>индивидуальный</span><br/> тариф
+          </h3>
+        </div>
+  
+        <form>
+          <div class="form-name-tel">
+            <div>
+              <label>Ваше имя</label>
+              <input type="text" placeholder="Имя*" />
+            </div>
+    
+            <div>
+              <label>Телефон</label>
+              <input type="tel" placeholder="+7 (---) --- -- --" />
+            </div>
+          </div>
+  
+          <div class="form-textarea">
+            <label>Расскажите о вашем проекте</label>
+            <textarea placeholder="Сообщение" />
+          </div>
+  
+          <div class="agreement">
+            <input type="checkbox" />
+            <p>Даю согласие на обработку моих данных</p>
+          </div>
+  
+          <button type="submit">
+            Отправить
+            <img src="@/assets/icons/send.svg" />
+          </button>
+        </form>
+      </div>
+
+      <div>
+        <div>
+          <img src="@/assets/images/letters.png" />
+        </div>
+
+        <div class="form-contacts">
+          <div class="contacts-desc">
+            <p class="desc-title">Контакты</p>
+            <p class="desc-subtitle">Напишите напрямую <br/> <span>Telegram</span></p>
+          </div>
+
+          <div class="form-regions">
+            <div>
+              <p class="region">Москва</p>
+            
+              <div class="region-info">
+                <img width="30" height="30" src="@/assets/icons/phone.svg" />
+                <span>+7 (495) 131-9038</span>
+              </div>
+            </div>
+
+            <div>
+              <p class="region">Санкт-Петербург</p>
+            
+              <div class="region-info">
+                <img width="30" height="30" src="@/assets/icons/phone.svg" />
+                <span>+7 (495) 131-9038</span>
+              </div>
+            </div>
+
+            <div>
+              <p class="region">Эл. почта</p>
+            
+              <div class="region-info">
+                <img width="30" height="30" src="@/assets/icons/letter.svg" />
+                <span>info@norbit.ru</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="facilities">
+    <ul>
+      <li>Техническая поддержка сайтов</li>
+      <li>•</li>
+      <li>Доработка сайтов</li>
+      <li>•</li>
+      <li>Поддержка сайтов WordPress</li>
+      <li>•</li>
+      <li>Поддержка сайтов Битрикс</li>
+      <li>•</li>
+      <li>Поддержка сайтов на ModX</li>
+      <li>•</li>
+      <li>Поддержка сайтов на ModX</li>
+    </ul>
+  </div>
+
+  <footer>
+      <img class="footer-grid" src="@/assets/images/grid.png" />
+
+      <div class="footer-block">
+
+        <div>
+          <img src="@/assets/icons/logo.png" />
+        </div>
+    
+        <div class="footer-services">
+          <div>
+            <p>Поддержка</p>
+    
+            <ul>
+              <li>Доработка и  обновление</li>
+              <li>Аудит</li>
+              <li>Защита данных</li>
+              <li>Интеграция сервисов</li>
+            </ul>
+          </div>
+    
+          <div>
+            <p>Развитие</p>
+            
+            <ul>
+              <li>Технологии</li>
+              <li>Обучающий центр</li>
+              <li>Разборы</li>
+            </ul>
+          </div>
+    
+          <div>
+            <p>Компания</p>
+            
+            <ul>
+              <li>об Anvexa</li>
+              <li>Контакты</li>
+              <li>Вакансии</li>
+              <li>Блог</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-contacts">
+        <div class="footer-agreement">
+          <p>©2007–2023 Anvexa. Все права защищены</p>
+        </div>
+
+        <div class="footer-details">
+          <div>
+            <img src="@/assets/icons/phone.svg" />
+            <p>+7 (495) 131-9038</p>
+          </div>
+
+          <div>
+            <img src="@/assets/icons/phone.svg" />
+            <p>+7 (495) 131-9038</p>
+          </div>
+        </div>
+      </div>
+   
+  </footer>
 </template>
 
 <style scoped>
   @import "@/assets/scss/home.scss";
+</style>
+
+<style lang="scss">
+.publicity-controls {
+  .carousel__pagination-button {
+    &::after {
+      width: 8px;
+      height: 8px;
+      border-radius: 30px;
+      opacity: 0.2;
+      background-color: #525252;
+    }
+  }
+  .carousel__pagination-button--active {
+    &::after {
+      width: 38px;
+      background: #5EAEAE !important;
+      opacity: 1;
+    }
+  }
+}
 </style>
