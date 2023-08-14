@@ -1,8 +1,32 @@
 <script setup>
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import { Carousel, Navigation, Slide } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
 
 const showSubcontent = ref(false);
+
+const breakpoints = ref({
+  0: {
+    itemsToShow: 1,
+    snapAlign: 'center',
+  },
+
+  768: {
+    itemsToShow: 1.5,
+    snapAlign: 'center',
+  },
+
+  998: {
+    itemsToShow: 2.5,
+    snapAlign: 'center',
+  },
+
+  1500: {
+    itemsToShow: 3.5,
+    snapAlign: 'center',
+  },
+})
 </script>
 
 <template>
@@ -515,8 +539,7 @@ const showSubcontent = ref(false);
 
   <section class="section-slider">
     <div class="slider-wrapper">
-      <div class="slider-desc">
-
+      <div class="slider-description">
         <img class="ornament" src="@/assets/icons/ornament.svg" />
 
         <div class="slider-info">
@@ -527,6 +550,222 @@ const showSubcontent = ref(false);
           С нами работают как не большие <br /> компании, так и <span>лидеры</span> рынка
         </h3>
       </div>
+
+      <div class="slider-carousel">
+        <Carousel :items-to-show="3.5" :wrap-around="true" :breakpoints="breakpoints">
+          <Slide key="slide1">
+            <div class="slider-item">
+              <div class="slider-image-desc">
+                <div class="slider-image">
+                  <div class="slider-logo">
+                    <img src="@/assets/images/Protex.png" />
+                  </div>
+  
+                  <div class="slider-popup">
+                    <p>Вместе с 2021</p>
+                  </div>
+                </div>
+  
+                <div class="slider-title">
+                  <h3>ПРОТЕХ</h3>
+                  <p>Полная техническая поддержка магазина мото товаров</p>
+                </div>
+              </div>
+
+              <ul class="slider-hashtags">
+                <li>#битрикс</li>
+                <li>#Корпоративный сайт</li>
+              </ul>
+
+              <div class="slider-info">
+                <p>
+                  За годы работы переработали все что возможно, от смены движка сайтов, до создания сложных систем и интеграций
+                </p>
+              </div>
+            </div>
+          </Slide>
+          
+          <Slide key="slide2">
+            <div class="slider-item">
+              <div class="slider-image-desc">
+                <div class="slider-image">
+                  <div class="slider-logo">
+                    <img src="@/assets/images/ProFlag.png" />
+                  </div>
+  
+                  <div class="slider-popup">
+                    <p>Вместе с 2021</p>
+                  </div>
+                </div>
+  
+                <div class="slider-title">
+                  <h3>ПроФлаг</h3>
+                  <p>Полная техническая поддержка магазина мото товаров</p>
+                </div>
+              </div>
+
+              <ul class="slider-hashtags">
+                <li>#битрикс</li>
+                <li>#Корпоративный сайт</li>
+              </ul>
+
+              <div class="slider-info">
+                <p>
+                  За годы работы переработали все что возможно, от смены движка сайтов, до создания сложных систем и интеграций
+                </p>
+              </div>
+            </div>
+          </Slide>
+
+          <Slide key="slide3">
+            <div class="slider-item">
+              <div class="slider-image-desc">
+                <div class="slider-image">
+                  <div class="slider-logo">
+                    <img src="@/assets/images/Motorrika.png" />
+                  </div>
+  
+                  <div class="slider-popup">
+                    <p>Вместе с 2021</p>
+                  </div>
+                </div>
+  
+                <div class="slider-title">
+                  <h3>ПРОТЕХ</h3>
+                  <p>Полная техническая поддержка магазина мото товаров</p>
+                </div>
+              </div>
+
+              <ul class="slider-hashtags">
+                <li>#битрикс</li>
+                <li>#Корпоративный сайт</li>
+              </ul>
+
+              <div class="slider-info">
+                <p>
+                  За годы работы переработали все что возможно, от смены движка сайтов, до создания сложных систем и интеграций
+                </p>
+              </div>
+            </div>
+          </Slide>
+  
+          <template #addons>
+            <Navigation />
+          </template>
+        </Carousel>
+      </div>
+
+      <div class="slider-statistics">
+        <ul>
+          <li>
+            <p>5000</p>
+            <span>Задач закрывается каждый <br /> день</span>
+          </li>
+
+          <li>
+            <p>80%</p>
+            <span>Клиентов работают с нами <br /> более 7 лет</span>
+          </li>
+
+          <li>
+            <p>90</p>
+            <span>Сайтов на комплексной <br /> поддержке</span>
+          </li>
+
+          <li>
+            <p>150</p>
+            <span>Компаний в год обращаются <br /> к нам</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-possibilities">
+    <div class="possibilities-wrapper">
+      
+      <div class="possibilities-desc">
+        <div class="possibilities-info">
+          <span>И это еще не все!</span>
+        </div>
+  
+        <h3 class="possibilities-title">
+          Какие проблемы <span>решаем</span> для <br /> клиента
+        </h3>
+      </div>
+
+      <ul class="possibilities-list">
+        <li>
+          <img src="@/assets/icons/possibilities-money.svg" />
+          <p>Высокая стоимость <br /> разработки</p>
+        </li>
+
+        <li>
+          <img src="@/assets/icons/clock-forward.svg" />
+          <p>Долгая реализация задач <br /></p>
+        </li>
+
+        <li>
+          <img src="@/assets/icons/file-branch.svg" />
+          <p>Нестандартная <br /> CMS система</p>
+        </li>
+
+        <li>
+          <img src="@/assets/icons/pulse.svg" />
+          <p>Медленная <br /> реакция</p>
+        </li>
+
+        <li>
+          <img src="@/assets/icons/erratically.svg" />
+          <p>Сайт работает <br /> нестабильно</p>
+        </li>
+
+        <li>
+          <img src="@/assets/icons/pencil.svg" />
+          <p>Нужна доработка <br /> сайта</p>
+        </li>
+      </ul>
+
+      <div class="possibilities-banner">
+        <div class="banner-block">
+          <div class="banner-desc">
+            <div class="ornament">
+              <img src="@/assets/icons/ornament-outline.svg" />
+            </div>
+  
+            <h3>Высокая стоимость <br/> разработки</h3>
+
+            <p>
+              Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники
+            </p>
+          </div>
+  
+          <div class="banner-bg">
+            <img src="@/assets/images/money-bag.png" />
+          </div>
+          
+          <img class="banner-grid" src="@/assets/images/grid.png" />
+        </div>
+
+      </div>      
+    </div>
+  </section>
+
+  <section class="section-future">
+    <div class="future-wrapper">
+      <div class="future-info">
+        <span>И это еще не все!</span>
+      </div>
+
+      <h3 class="future-title">
+        Заглянем немного в <br/> совместное <span>будущее</span>.
+      </h3>
+    </div>
+  </section>
+
+  <section class="seaction-publicity">
+    <div class="publicity-wrapper">
+      
     </div>
   </section>
 </template>
