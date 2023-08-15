@@ -110,6 +110,7 @@ header {
             font-family: 'Raleway-Bold';
             font-style: normal;
             font-size: 16px;
+            @extend .raleway-numerals;
           }
           span {
             font-family: 'Raleway-Regular';
@@ -207,7 +208,7 @@ header {
     }
   
     .circular-text {
-      width: fit-content;
+      transform: scale(0.85);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -635,7 +636,11 @@ header {
         .card-price {
           font-family: 'Raleway-Bold';
           font-size: 46px;
-          margin-top: 6px;
+
+          p {
+            margin-top: 6px;
+            @extend .raleway-numerals;
+          }
 
           span {
             font-size: 18px;
@@ -850,6 +855,7 @@ header {
           p {
             font-size: 58px;
             font-family: 'Raleway-ExtraBold';
+            @extend .raleway-numerals;
           }
 
           span {
@@ -907,12 +913,20 @@ header {
     padding: 0 2rem;
     z-index: 1;
 
+    .selected-possibility {
+      border: 2px solid #5EAEAE;
+      p {
+        color: #5EAEAE;
+      }
+    }
+
     li {
       flex-basis: 200px;
       border-radius: 12px;
       background: #FFF;
       padding: 18px;
       border: 2px solid #fff;
+      cursor: pointer;
 
       img {
         margin-bottom: 8px;
@@ -922,13 +936,6 @@ header {
         font-family: 'Raleway-Bold';
         color: #525252;
         font-size: 16px;
-      }
-
-      &:first-child {
-        border: 2px solid #5EAEAE;
-        p {
-          color: #5EAEAE;
-        }
       }
     }
   }
@@ -1194,6 +1201,17 @@ header {
         justify-content: space-between;
         gap: 8px;
 
+        > div {
+          &:hover {
+            label {
+              color: #5EAEAE;
+            }
+            input {
+              border-color: #5EAEAE;
+            }
+          }
+        }
+
         input {
           width: 304px;
           max-width: 100%;
@@ -1214,6 +1232,7 @@ header {
 
       .form-textarea {
         margin-top: 80px;
+        
         textarea {
           width: 100%;
           border: none;
@@ -1227,6 +1246,15 @@ header {
             color: #525252;
             font-family: 'Raleway-Regular';
             opacity: 0.7;
+          }
+        }
+
+        &:hover {
+          label {
+            color: #5EAEAE;
+          }
+          textarea {
+            border-color: #5EAEAE;
           }
         }
       }
@@ -1288,7 +1316,7 @@ header {
           font-size: 18px;
           font-family: 'Raleway-Regular';
           line-height: 28px;
-          span {
+          a {
             color: #5EAEAE;
             font-family: 'Raleway-Bold';
             font-size: 18px;
@@ -1318,9 +1346,12 @@ header {
           padding: 15px 30px;
           border-radius: 58px;
 
-          span {
+          span, a {
             font-family: 'Raleway-Bold';
             font-size: 20px;
+            color: #000;
+            text-decoration: none;
+            @extend .raleway-numerals;
           }
         }
       }
@@ -1425,4 +1456,10 @@ footer {
         }
       }
     }
+}
+
+@media screen and (max-width: 1279px) {
+  section > div {
+    transform: scale(0.8);
+  }
 }
