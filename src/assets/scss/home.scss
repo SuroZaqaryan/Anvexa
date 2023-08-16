@@ -44,6 +44,7 @@ header {
           &:hover {
             background-color: #E5EDED;
             color: #5EAEAE;
+
             svg {
               transform: rotateX(180deg);
               path {
@@ -57,7 +58,7 @@ header {
       .service-subcontent {
         position: absolute;
         top: 0;
-        margin-top: 6.5rem;
+        margin-top: 5.5rem;
         width: 944px;
         max-width: 100%;
         border-radius: 12px;
@@ -1187,12 +1188,23 @@ header {
     form {
       max-width: 640px;
       margin-top: 96px;
+      
+      .form-active {
+        label {
+          color: #000 !important;
+          opacity: 0.3;
+        }
+        input {
+          border-bottom: 3px solid #5EAEAE !important;
+        }
+      }
 
       label {
         font-family: 'Raleway-Bold';
         font-size: 26px;
         display: block;
         margin-bottom: 30px;
+        transition: 0.1s;
       }
 
       .form-name-tel {
@@ -1220,7 +1232,9 @@ header {
           padding-bottom: 14px;
           outline: none;
           font-size: 18px;
-  
+          transition: 0.2s;
+          @extend .raleway-numerals;
+          
           &::placeholder {
             font-size: 18px;
             color: #525252;
@@ -1436,6 +1450,7 @@ footer {
         p {
           color: #525252;
           font-size: 16px;
+          @extend .raleway-numerals;
         }
       }
 
@@ -1452,6 +1467,7 @@ footer {
           p {
             font-size: 16px;
             font-family: 'Raleway-Bold';
+            @extend .raleway-numerals;
           }
         }
       }

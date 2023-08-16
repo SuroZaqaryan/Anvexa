@@ -58,6 +58,33 @@ const possibilities = ref([
 
 const activeIdx = ref(-1)
 
+const isPhoneFocused = ref(false)
+const isNameFocused = ref(false)
+const isMessageFocused = ref(false)
+
+const name = ref('');
+const phone = ref('');
+const message = ref('');
+
+const handleFocus = (inputType) => {
+    if (inputType === 'name') {
+        isNameFocused.value = true;
+    } else if (inputType === 'phone') {
+        isPhoneFocused.value = true;
+    } else if (inputType === 'message') {
+        isMessageFocused.value = true;
+    }
+}
+const handleBlur = (inputType) => {
+    if (inputType === 'name') {
+        isNameFocused.value = false;
+    } else if (inputType === 'phone') {
+        isPhoneFocused.value = false;
+    } else if (inputType === 'message') {
+        isMessageFocused.value = false;
+    }
+}
+
 const selectPossibility = (idx) => {
     activeIdx.value = idx === activeIdx.value ? -1 : idx;
 }
@@ -757,35 +784,6 @@ const prev = () => {
                     <img v-svg-inline :src="item.icon"/>
                     <p>{{ item.title }}</p>
                 </li>
-                <!-- <li>
-                  <img src="@/assets/icons/possibilities-money.svg" />
-                  <p>Высокая стоимость <br /> разработки</p>
-                </li>
-
-                <li>
-                  <img src="@/assets/icons/clock-forward.svg" />
-                  <p>Долгая реализация задач <br /></p>
-                </li>
-
-                <li>
-                  <img src="@/assets/icons/file-branch.svg" />
-                  <p>Нестандартная <br /> CMS система</p>
-                </li>
-
-                <li>
-                  <img src="@/assets/icons/pulse.svg" />
-                  <p>Медленная <br /> реакция</p>
-                </li>
-
-                <li>
-                  <img src="@/assets/icons/erratically.svg" />
-                  <p>Сайт работает <br /> нестабильно</p>
-                </li>
-
-                <li>
-                  <img src="@/assets/icons/pencil.svg" />
-                  <p>Нужна доработка <br /> сайта</p>
-                </li> -->
             </ul>
 
             <div class="possibilities-banner">
@@ -896,24 +894,41 @@ const prev = () => {
 
                 <form>
                     <div class="form-name-tel">
-                        <div>
+                        <div :class="{'form-active': isNameFocused}">
                             <label>Ваше имя</label>
-                            <input type="text" placeholder="Имя*"/>
+                            <input 
+                                type="text" 
+                                v-model="name"
+                                @focus="handleFocus('name')" 
+                                @blur="handleBlur('name')" 
+                                :placeholder="isNameFocused ? '' : 'Имя*'" 
+                            />
                         </div>
 
-                        <div>
+                        <div :class="{'form-active': isPhoneFocused}">
                             <label>Телефон</label>
-                            <input type="tel" placeholder="+7 (---) --- -- --"/>
+                            <input 
+                                type="tel" 
+                                v-model="phone"
+                                @focus="handleFocus('phone')" 
+                                @blur="handleBlur('phone')" 
+                                :placeholder="isPhoneFocused ? '' : '+7 (---) --- -- --'"
+                            />
                         </div>
                     </div>
 
-                    <div class="form-textarea">
+                    <div :class="{'label-active': isMessageFocused}" class="form-textarea">
                         <label>Расскажите о вашем проекте</label>
-                        <textarea placeholder="Сообщение"/>
+                        <textarea 
+                            v-model="message"
+                            @focus="handleFocus('message')" 
+                            @blur="handleBlur('message')"  
+                            :placeholder="isMessageFocused ? '' : 'Сообщение'"
+                        />
                     </div>
 
                     <div class="agreement">
-                        <input type="checkbox"/>
+                        <input type="checkbox" @focus="handleFocus" />
                         <p>Даю согласие на обработку моих данных</p>
                     </div>
 
