@@ -1478,4 +1478,25 @@ footer {
   section > div {
     transform: scale(0.8);
   }
+
+  .form-wrapper {
+    margin: 100px auto;
+  }
+
+  .future-wrapper {
+    padding-top: 0;
+  }
+
+  .section-possibilities {
+    margin-top: 0;
+  }
+
+  .tariff-message {
+    margin-bottom: 0;
+  }
+
+  .tariff-wrapper,
+  .services-wrapper {
+    margin: auto;
+  }
 }
