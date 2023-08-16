@@ -631,6 +631,8 @@ const selectPossibility = (idx) => {
                 <Carousel :items-to-show="3.5" :wrap-around="true" :breakpoints="breakpoints" ref="carouselSlider">
                     <Slide key="slide1">
                         <div class="slider-item">
+                            <img class="slider-image-preview" src="https://borlabs.io/wp-content/uploads/2019/03/blog-gutenberg-screenshot-1-en-1024x617.png"/>
+
                             <div class="slider-image-desc">
                                 <div class="slider-image">
                                     <div class="slider-logo">
@@ -664,6 +666,8 @@ const selectPossibility = (idx) => {
 
                     <Slide key="slide2">
                         <div class="slider-item">
+                            <img class="slider-image-preview" src="https://i.ibb.co/fSpW8Kc/1.png"/>
+                            
                             <div class="slider-image-desc">
                                 <div class="slider-image">
                                     <div class="slider-logo">
@@ -697,6 +701,8 @@ const selectPossibility = (idx) => {
 
                     <Slide key="slide3">
                         <div class="slider-item">
+                            <img class="slider-image-preview" src="https://wordpress.org/gutenberg/files/2022/06/screenshot.png"/>
+
                             <div class="slider-image-desc">
                                 <div class="slider-image">
                                     <div class="slider-logo">
@@ -729,12 +735,12 @@ const selectPossibility = (idx) => {
                     </Slide>
 
                     <template #addons>
-                        <button @click="carouselSlider.next()" class="carousel-next">
-                            <img src="@/assets/icons/slider-arrow-left.svg"/>
+                        <button @click="carouselSlider.next()" class="carousel-prev">
+                            <img src="@/assets/icons/slider-arrow-right.svg"/>
                         </button>
 
-                        <button @click="carouselSlider.prev()" class="carousel-prev">
-                            <img src="@/assets/icons/slider-arrow-right.svg"/>
+                        <button @click="carouselSlider.prev()" class="carousel-next">
+                            <img src="@/assets/icons/slider-arrow-left.svg"/>
                         </button>
                     </template>
                 </Carousel>
@@ -1078,6 +1084,11 @@ const selectPossibility = (idx) => {
 
 <style lang="scss">
 .slider-carousel {
+    .carousel__viewport {
+        height: 900px;
+        display: flex;
+        align-items: center;
+    }
     .carousel-next {
         left: 20px;
     }
