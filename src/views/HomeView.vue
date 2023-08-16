@@ -933,7 +933,7 @@ const selectPossibility = (idx) => {
                         </div>
                     </div>
 
-                    <div :class="{'label-active': isMessageFocused}" class="form-textarea">
+                    <div :class="{'form-active': isMessageFocused}" class="form-textarea">
                         <label>Расскажите о вашем проекте</label>
                         <textarea 
                             v-model="message"
