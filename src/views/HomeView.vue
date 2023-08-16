@@ -8,7 +8,7 @@ const showSubcontent = ref(false);
 const carouselPublicity = ref(null);
 const carouselSlider = ref(null);
 
-const breakpoints = ref({
+const breakpointsSlider = ref({
     0: {
         itemsToShow: 1,
         snapAlign: 'center',
@@ -628,7 +628,7 @@ const selectPossibility = (idx) => {
             </div>
 
             <div class="slider-carousel">
-                <Carousel :items-to-show="3.5" :wrap-around="true" :breakpoints="breakpoints" ref="carouselSlider">
+                <Carousel :items-to-show="3.5" :wrap-around="true" :breakpoints="breakpointsSlider" ref="carouselSlider">
                     <Slide key="slide1">
                         <div class="slider-item">
                             <img class="slider-image-preview" src="https://borlabs.io/wp-content/uploads/2019/03/blog-gutenberg-screenshot-1-en-1024x617.png"/>
@@ -1114,7 +1114,16 @@ const selectPossibility = (idx) => {
             width: 30px;
         }
     }
+
+    @media screen and (max-width: 1600px) {
+        .carousel__viewport {
+            height: 983px;
+            display: flex;
+            align-items: center;
+        }
+    }
 }
+
 .carousel {
     .publicity-controls {
         .carousel__pagination-button {
