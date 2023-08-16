@@ -1,11 +1,12 @@
 <script setup>
 import {ref} from 'vue'
 import {RouterLink} from 'vue-router'
-import {Carousel, Navigation, Pagination, Slide} from 'vue3-carousel'
+import {Carousel, Pagination, Slide} from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 
 const showSubcontent = ref(false);
 const carouselPublicity = ref(null);
+const carouselSlider = ref(null);
 
 const breakpoints = ref({
     0: {
@@ -24,6 +25,11 @@ const breakpoints = ref({
     },
 
     1500: {
+        itemsToShow: 2.5,
+        snapAlign: 'center',
+    },
+
+    1600: {
         itemsToShow: 3.5,
         snapAlign: 'center',
     },
@@ -75,6 +81,7 @@ const handleFocus = (inputType) => {
         isMessageFocused.value = true;
     }
 }
+
 const handleBlur = (inputType) => {
     if (inputType === 'name') {
         isNameFocused.value = false;
@@ -87,14 +94,6 @@ const handleBlur = (inputType) => {
 
 const selectPossibility = (idx) => {
     activeIdx.value = idx === activeIdx.value ? -1 : idx;
-}
-
-const next = () => {
-    carouselPublicity.value.next();
-}
-
-const prev = () => {
-    carouselPublicity.value.prev();
 }
 </script>
 
@@ -629,7 +628,7 @@ const prev = () => {
             </div>
 
             <div class="slider-carousel">
-                <Carousel :items-to-show="3.5" :wrap-around="true" :breakpoints="breakpoints">
+                <Carousel :items-to-show="3.5" :wrap-around="true" :breakpoints="breakpoints" ref="carouselSlider">
                     <Slide key="slide1">
                         <div class="slider-item">
                             <div class="slider-image-desc">
@@ -730,7 +729,13 @@ const prev = () => {
                     </Slide>
 
                     <template #addons>
-                        <Navigation/>
+                        <button @click="carouselSlider.next()" class="carousel-next">
+                            <img src="@/assets/icons/slider-arrow-left.svg"/>
+                        </button>
+
+                        <button @click="carouselSlider.prev()" class="carousel-prev">
+                            <img src="@/assets/icons/slider-arrow-right.svg"/>
+                        </button>
                     </template>
                 </Carousel>
             </div>
@@ -862,11 +867,11 @@ const prev = () => {
                                 </div>
 
                                 <div class="publicity-navigation">
-                                    <button @click="prev">
+                                    <button @click="carouselPublicity.prev()">
                                         <img src="@/assets/icons/slider-arrow-left.svg"/>
                                     </button>
 
-                                    <button @click="next">
+                                    <button @click="carouselPublicity.next()">
                                         <img src="@/assets/icons/slider-arrow-right.svg"/>
                                     </button>
                                 </div>
@@ -1072,6 +1077,33 @@ const prev = () => {
 </style>
 
 <style lang="scss">
+.slider-carousel {
+    .carousel-next {
+        left: 20px;
+    }
+
+    .carousel-prev {
+        right: 20px;
+    }
+
+    button {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 86px;
+        height: 86px;
+        border-radius: 43px;
+        background: var(--white, #FFF);
+        border: none;
+        box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.15);
+        z-index: 10;
+
+        img {
+            width: 30px;
+        }
+    }
+}
 .carousel {
     .publicity-controls {
         .carousel__pagination-button {

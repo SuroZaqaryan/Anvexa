@@ -747,8 +747,31 @@ header {
     }
 
     .slider-carousel {
-      max-width: 1900px;
+      position: relative;
       margin: auto;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 270px;
+        background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0) 100%);
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: 1;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 270px;
+        background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0) 100%);
+        right: 0;
+        top: 0;
+        height: 100%;
+        transform: rotate(180deg);
+        z-index: 1;
+      }
 
       .carousel__slide {
         padding: 10px;
@@ -1481,18 +1504,30 @@ footer {
 }
 
 @media screen and (max-width: 1600px) {
+  .slider-wrapper,
   .possibilities-wrapper {
     transform: scale(1);
+  }
+
+  .carousel-prev,
+  .carousel-next {
+    width: 56px;
+    height: 56px;
+    img {
+      width: 20px;
+    }
   }
 
   .facilities ul li {
     font-size: 14px;
   }
 
-  .footer-wrapper {
+  .footer-block {
     transform: scale(0.9);
   }
 
+  .slider-statistics,
+  .slider-description,
   .possibilities-title,
   .possibilities-list,
   .banner-block,
@@ -1525,7 +1560,7 @@ footer {
   }
 
   .section-possibilities {
-    margin-top: 0;
+    margin-top: 150px;
   }
 
   .section-tariff .tariff-wrapper .tariff-message {
