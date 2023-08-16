@@ -1379,7 +1379,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 8px;
     height: 71px;
+    padding: 0 14px;
     background: #000;
 
     li {
@@ -1392,91 +1394,126 @@ header {
 
 footer {
     position: relative;
-    height: 732px;
     background-color: #E5EDED;
     padding: 0 2rem;
 
-    .footer-grid {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-    }
+    .footer-wrapper {
+      height: 732px;
 
-    .footer-block {
-      max-width: 1352px;
-      margin: auto;
-      width: 100%;
-      height: calc(100% - 138px);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      .footer-services {
+      .footer-grid {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+  
+      .footer-block {
+        max-width: 1352px;
+        margin: auto;
+        width: 100%;
+        height: calc(100% - 138px);
         display: flex;
         align-items: center;
-        gap: 143px;
-        p {
-          color: #838383;
-          font-size: 18px;
-          margin-bottom: 32px;
-        }
-    
-        ul {
+        justify-content: space-between;
+  
+        .footer-services {
           display: flex;
-          flex-direction: column;
-          gap: 26px;
-    
-          li {
+          align-items: center;
+          gap: 143px;
+          p {
+            color: #838383;
             font-size: 18px;
-            font-family: 'Raleway-SemiBold';
-            cursor: pointer;
+            margin-bottom: 32px;
+          }
+      
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+      
+            li {
+              font-size: 18px;
+              font-family: 'Raleway-SemiBold';
+              cursor: pointer;
+            }
           }
         }
       }
-    }
-  
-    .footer-contacts {
-      width: 100%;
-      height: 138px;
-      border-top: 1px solid rgba(128, 128, 128, 0.373);
-      max-width: 1352px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .footer-agreement {
-        p {
-          color: #525252;
-          font-size: 16px;
-          @extend .raleway-numerals;
-        }
-      }
-
-      .footer-details {
+    
+      .footer-contacts {
+        width: 100%;
+        height: 138px;
+        border-top: 1px solid rgba(128, 128, 128, 0.373);
+        max-width: 1352px;
+        margin: auto;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 23px;
-
-        > div {
-          display: flex;
-          align-items: center;
-          gap: 9px;
-
+  
+        .footer-agreement {
           p {
+            color: #525252;
             font-size: 16px;
-            font-family: 'Raleway-Bold';
             @extend .raleway-numerals;
           }
         }
+  
+        .footer-details {
+          display: flex;
+          align-items: center;
+          gap: 23px;
+  
+          > div {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+  
+            p {
+              font-size: 16px;
+              font-family: 'Raleway-Bold';
+              @extend .raleway-numerals;
+            }
+          }
+        }
       }
     }
+
 }
 
 @media screen and (max-width: 1600px) {
+  .possibilities-wrapper {
+    transform: scale(1);
+  }
+
+  .facilities ul li {
+    font-size: 14px;
+  }
+
+  .footer-wrapper {
+    transform: scale(0.9);
+  }
+
+  .possibilities-title,
+  .possibilities-list,
+  .banner-block,
   section > div {
     transform: scale(0.8);
+  }
+
+  .section-possibilities .possibilities-banner .banner-block .banner-grid {
+    bottom: -20%;
+  }
+
+  .section-future {
+    height: 390px;
+  }
+
+  .section-future .future-wrapper {
+    margin-bottom: 3rem;
+  }
+
+  .section-possibilities .possibilities-desc .possibilities-title {
+    margin-bottom: 40px;
   }
 
   .section-form .form-wrapper {

@@ -820,7 +820,7 @@ const prev = () => {
             </div>
 
             <h3 class="future-title">
-                Заглянем немного в <br/> совместное <span>будущее</span>.
+                Заглянем немного в совместное <br/> <span>будущее</span>.
             </h3>
 
             <img class="future-grid" src="@/assets/images/grid.png"/>
@@ -1002,67 +1002,68 @@ const prev = () => {
     </div>
 
     <footer>
-        <img class="footer-grid" src="@/assets/images/grid.png"/>
+        <div class="footer-wrapper">
+            <img class="footer-grid" src="@/assets/images/grid.png"/>
 
-        <div class="footer-block">
+            <div class="footer-block">
 
-            <div>
-                <img src="@/assets/icons/logo.png"/>
+                <div>
+                    <img src="@/assets/icons/logo.png"/>
+                </div>
+
+                <div class="footer-services">
+                    <div>
+                        <p>Поддержка</p>
+
+                        <ul>
+                            <li>Доработка и обновление</li>
+                            <li>Аудит</li>
+                            <li>Защита данных</li>
+                            <li>Интеграция сервисов</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p>Развитие</p>
+
+                        <ul>
+                            <li>Технологии</li>
+                            <li>Обучающий центр</li>
+                            <li>Разборы</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p>Компания</p>
+
+                        <ul>
+                            <li>об Anvexa</li>
+                            <li>Контакты</li>
+                            <li>Вакансии</li>
+                            <li>Блог</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div class="footer-services">
-                <div>
-                    <p>Поддержка</p>
-
-                    <ul>
-                        <li>Доработка и обновление</li>
-                        <li>Аудит</li>
-                        <li>Защита данных</li>
-                        <li>Интеграция сервисов</li>
-                    </ul>
+            <div class="footer-contacts">
+                <div class="footer-agreement">
+                    <p>©2007–2023 Anvexa. Все права защищены</p>
                 </div>
 
-                <div>
-                    <p>Развитие</p>
+                <div class="footer-details">
+                    <div>
+                        <img src="@/assets/icons/phone.svg"/>
+                        <p>+7 (495) 131-9038</p>
+                    </div>
 
-                    <ul>
-                        <li>Технологии</li>
-                        <li>Обучающий центр</li>
-                        <li>Разборы</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <p>Компания</p>
-
-                    <ul>
-                        <li>об Anvexa</li>
-                        <li>Контакты</li>
-                        <li>Вакансии</li>
-                        <li>Блог</li>
-                    </ul>
+                    <div>
+                        <img src="@/assets/icons/phone.svg"/>
+                        <p>+7 (495) 131-9038</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="footer-contacts">
-            <div class="footer-agreement">
-                <p>©2007–2023 Anvexa. Все права защищены</p>
-            </div>
-
-            <div class="footer-details">
-                <div>
-                    <img src="@/assets/icons/phone.svg"/>
-                    <p>+7 (495) 131-9038</p>
-                </div>
-
-                <div>
-                    <img src="@/assets/icons/phone.svg"/>
-                    <p>+7 (495) 131-9038</p>
-                </div>
-            </div>
-        </div>
-
     </footer>
 </template>
 
