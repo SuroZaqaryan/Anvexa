@@ -1479,11 +1479,11 @@ footer {
     transform: scale(0.8);
   }
 
-  .form-wrapper {
+  .section-form .form-wrapper {
     margin: 100px auto;
   }
 
-  .future-wrapper {
+  .section-future .future-wrapper {
     padding-top: 0;
   }
 
@@ -1491,12 +1491,12 @@ footer {
     margin-top: 0;
   }
 
-  .tariff-message {
+  .section-tariff .tariff-wrapper .tariff-message {
     margin-bottom: 0;
   }
 
-  .tariff-wrapper,
-  .services-wrapper {
+  .section-tariff .tariff-wrapper,
+  .section-services .services-wrapper {
     margin: auto;
   }
 }
