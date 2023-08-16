@@ -1557,9 +1557,12 @@ footer {
     margin-top: 20px;
   }
 
+  header .header-wrapper {
+    width: 1210px;
+  }
+
   .hero-wrapper,
   .publicity-images,
-  .header-wrapper,
   .footer-block {
     transform: scale(0.9);
   }

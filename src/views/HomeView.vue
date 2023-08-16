@@ -30,6 +30,11 @@ const breakpointsSlider = ref({
     },
 
     1600: {
+        itemsToShow: 3,
+        snapAlign: 'center',
+    },
+
+    1700: {
         itemsToShow: 3.5,
         snapAlign: 'center',
     },
