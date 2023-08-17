@@ -243,7 +243,7 @@
   .support-wrapper {
     margin-top: 106px;
     margin-bottom: 160px;
-    
+
     h2 {
       margin-top: 20px;
     }
@@ -556,6 +556,9 @@
     }
 
     li {
+      align-items: flex-start;
+      flex-direction: column;
+      text-align: left;
       flex-basis: 200px;
       border-radius: 12px;
       background: #FFF;
@@ -583,6 +586,12 @@
     height: 736px;
     padding: 0 2rem;
 
+    .banner-grid {
+      position: absolute;
+      bottom: -8%;
+      left: 13%;
+    }
+
     .banner-block {
       position: relative;
       display: flex;
@@ -592,41 +601,44 @@
       margin: auto;
       justify-content: space-between;
 
-      .banner-desc {
-        flex-basis: 530px;
-        margin-right: 4rem;
+      li {
+        justify-content: space-between;
 
-        .ornament {
-          display: flex;
-          justify-content: flex-end;
-        }
+        .banner-desc {
+          flex-basis: 530px;
+          margin-right: 4rem;
+          text-align: left;
 
-        h3 {
-          font-size: 36px;
-          font-family: 'Raleway-Bold';
-          margin-bottom: 26px;
-        }
+          .ornament {
+            display: flex;
+            justify-content: flex-end;
+          }
 
-        p {
-          font-size: 22px;
-          color: #525252;
-          font-family: 'Raleway-Regular';
+          h3 {
+            font-size: 36px;
+            font-family: 'Raleway-Bold';
+            margin-bottom: 26px;
+          }
+
+          p {
+            font-size: 22px;
+            color: #525252;
+            font-family: 'Raleway-Regular';
+          }
         }
       }
+
 
       .banner-bg {
+        display: flex;
         flex-basis: 500px;
+        max-height: 450px;
 
         img {
-          width: 100%;
+          width: 80%;
           max-width: 100%;
+          object-fit: contain;
         }
-      }
-
-      .banner-grid {
-        position: absolute;
-        bottom: -8%;
-        left: 0;
       }
     }
   }
@@ -772,6 +784,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 
     form {
       max-width: 640px;
@@ -1012,16 +1025,21 @@
     margin-top: 20px;
   }
 
+  .section-possibilities .possibilities-banner .banner-block {
+    width: 1125px;
+  }
+
   .hero-wrapper,
   .publicity-images {
     transform: scale(0.9);
   }
 
+  .banner-bg,
+  .banner-desc,
   .slider-statistics,
   .slider-description,
   .possibilities-title,
   .possibilities-list,
-  .banner-block,
   section>div {
     transform: scale(0.8);
   }

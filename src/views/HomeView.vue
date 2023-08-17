@@ -11,33 +11,95 @@ import TitleDescription from '@/components/TitleDescription.vue'
 
 const carouselPublicity = ref(null);
 
+const possibilities = ref({
+    title: [
+        {
+            title: "Высокая стоимость разработки",
+            icon: new URL("@/assets/icons/possibilities-money.svg", import.meta.url).href,
+        },
+        {
+            title: "Долгая реализация задач",
+            icon: new URL("@/assets/icons/clock-forward.svg", import.meta.url).href,
+        },
+        {
+            title: "Нестандартная CMS система",
+            icon: new URL("@/assets/icons/file-branch.svg", import.meta.url).href,
+        },
+        {
+            title: "Медленная реакция",
+            icon: new URL("@/assets/icons/pulse.svg", import.meta.url).href,
+        },
+        {
+            title: "Сайт работает нестабильно",
+            icon: new URL("@/assets/icons/erratically.svg", import.meta.url).href,
+        },
+        {
+            title: "Нужна доработка сайта",
+            icon: new URL("@/assets/icons/pencil.svg", import.meta.url).href,
+        },
+    ],
 
-const possibilities = ref([
-    {
-        title: "Высокая стоимость разработки",
-        icon: new URL("@/assets/icons/possibilities-money.svg", import.meta.url).href,
-    },
-    {
-        title: "Долгая реализация задач",
-        icon: new URL("@/assets/icons/clock-forward.svg", import.meta.url).href,
-    },
-    {
-        title: "Нестандартная CMS система",
-        icon: new URL("@/assets/icons/file-branch.svg", import.meta.url).href,
-    },
-    {
-        title: "Медленная реакция",
-        icon: new URL("@/assets/icons/pulse.svg", import.meta.url).href,
-    },
-    {
-        title: "Сайт работает нестабильно",
-        icon: new URL("@/assets/icons/erratically.svg", import.meta.url).href,
-    },
-    {
-        title: "Нужна доработка сайта",
-        icon: new URL("@/assets/icons/pencil.svg", import.meta.url).href,
-    },
-])
+    content: [
+        {
+            title: "Высокая стоимость разработки",
+            description: "Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники",
+            image: new URL("@/assets/images/money-bag.png", import.meta.url).href,
+        },
+        {
+            title: "Долгая реализация задач",
+            description: "Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники",
+            image: new URL("@/assets/images/file-doc.png", import.meta.url).href,
+        },
+        {
+            title: "Ненадёжный подрядчик/сотрудник",
+            description: "Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники",
+            image: new URL("@/assets/images/human.png", import.meta.url).href,
+        },
+        {
+            title: "Медленная реакция",
+            description: "Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники",
+            image: new URL("@/assets/images/time-managment.png", import.meta.url).href,
+        },
+        {
+            title: "Сайт работает нестабильно",
+            description: "Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники",
+            image: new URL("@/assets/images/web-developmen.png", import.meta.url).href,
+        },
+        {
+            title: "Нужна доработка сайта",
+            description: "Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники",
+            image: new URL("@/assets/images/refinement.png", import.meta.url).href,
+        },
+    ]
+})
+
+
+// const possibilities = ref([
+//     {
+//         title: "Высокая стоимость разработки",
+//         icon: new URL("@/assets/icons/possibilities-money.svg", import.meta.url).href,
+//     },
+//     {
+//         title: "Долгая реализация задач",
+//         icon: new URL("@/assets/icons/clock-forward.svg", import.meta.url).href,
+//     },
+//     {
+//         title: "Нестандартная CMS система",
+//         icon: new URL("@/assets/icons/file-branch.svg", import.meta.url).href,
+//     },
+//     {
+//         title: "Медленная реакция",
+//         icon: new URL("@/assets/icons/pulse.svg", import.meta.url).href,
+//     },
+//     {
+//         title: "Сайт работает нестабильно",
+//         icon: new URL("@/assets/icons/erratically.svg", import.meta.url).href,
+//     },
+//     {
+//         title: "Нужна доработка сайта",
+//         icon: new URL("@/assets/icons/pencil.svg", import.meta.url).href,
+//     },
+// ])
 
 const activeIdx = ref(-1)
 
@@ -48,6 +110,8 @@ const isMessageFocused = ref(false)
 const name = ref('');
 const phone = ref('');
 const message = ref('');
+
+const currentSlide = ref(0)
 
 const handleFocus = (inputType) => {
     if (inputType === 'name') {
@@ -69,7 +133,12 @@ const handleBlur = (inputType) => {
     }
 }
 
+const slideTo = (val) => {
+    currentSlide.value = val
+}
+
 const selectPossibility = (idx) => {
+    currentSlide.value = (idx + 1) - 1;
     activeIdx.value = idx === activeIdx.value ? -1 : idx;
 }
 </script>
@@ -488,7 +557,9 @@ const selectPossibility = (idx) => {
         </div>
     </section>
 
-    <section class="section-slider"><Slider /></section>
+    <section class="section-slider">
+        <Slider />
+    </section>
 
     <section class="section-possibilities">
         <div class="possibilities-wrapper">
@@ -504,36 +575,32 @@ const selectPossibility = (idx) => {
             </div>
 
             <ul class="possibilities-list">
-                <li v-for="(item, idx) in possibilities" @click="selectPossibility(idx)" :key="idx"
+                <Slide v-for="(item, idx) in possibilities.title" :key="idx" @click="selectPossibility(idx)"
                     :class="{ 'selected-possibility': idx === activeIdx }">
                     <img v-svg-inline :src="item.icon" />
                     <p>{{ item.title }}</p>
-                </li>
+                </Slide>
             </ul>
 
             <div class="possibilities-banner">
-                <div class="banner-block">
-                    <div class="banner-desc">
-                        <div class="ornament">
-                            <img src="@/assets/icons/ornament-outline.svg" />
+                <Carousel class="banner-block" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
+                    <Slide v-for="slide in possibilities.content" :key="slide">
+                        <div class="banner-desc">
+                            <div class="ornament">
+                                <img src="@/assets/icons/ornament-outline.svg" />
+                            </div>
+
+                            <h3>{{ slide.title }}</h3>
+                            <p>{{ slide.description }}</p>
                         </div>
 
-                        <h3>Высокая стоимость <br /> разработки</h3>
+                        <div class="banner-bg">
+                            <img :src="slide.image" />
+                        </div>
+                    </Slide>
+                </Carousel>
 
-                        <p>
-                            Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в
-                            удобной системе куда имеют доступ нужные сотрудники, Ведем ваш проект в удобной системе куда
-                            имеют доступ нужные сотрудники
-                        </p>
-                    </div>
-
-                    <div class="banner-bg">
-                        <img src="@/assets/images/money-bag.png" />
-                    </div>
-
-                    <img class="banner-grid" src="@/assets/images/grid.png" />
-                </div>
-
+                <img class="banner-grid" src="@/assets/images/grid.png" />
             </div>
         </div>
     </section>
