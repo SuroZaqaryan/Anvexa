@@ -1,0 +1,167 @@
+<template>
+  <footer>
+    <div class="footer-wrapper">
+      <img class="footer-grid" src="@/assets/images/grid.png" />
+
+      <div class="footer-block">
+
+        <div>
+          <img src="@/assets/icons/logo.png" />
+        </div>
+
+        <div class="footer-services">
+          <div>
+            <p>Поддержка</p>
+
+            <ul>
+              <li>Доработка и обновление</li>
+              <li>Аудит</li>
+              <li>Защита данных</li>
+              <li>Интеграция сервисов</li>
+            </ul>
+          </div>
+
+          <div>
+            <p>Развитие</p>
+
+            <ul>
+              <li>Технологии</li>
+              <li>Обучающий центр</li>
+              <li>Разборы</li>
+            </ul>
+          </div>
+
+          <div>
+            <p>Компания</p>
+
+            <ul>
+              <li>об Anvexa</li>
+              <li>Контакты</li>
+              <li>Вакансии</li>
+              <li>Блог</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-contacts">
+        <div class="footer-agreement">
+          <p>©2007–2023 Anvexa. Все права защищены</p>
+        </div>
+
+        <div class="footer-details">
+          <div>
+            <img src="@/assets/icons/phone.svg" />
+            <p>+7 (495) 131-9038</p>
+          </div>
+
+          <div>
+            <img src="@/assets/icons/phone.svg" />
+            <p>+7 (495) 131-9038</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<style scoped lang="scss">
+footer {
+  position: relative;
+  background-color: #E5EDED;
+  padding: 0 2rem;
+
+  .footer-wrapper {
+    height: 732px;
+
+    .footer-grid {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    .footer-block {
+      max-width: 1352px;
+      margin: auto;
+      width: 100%;
+      height: calc(100% - 138px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .footer-services {
+        display: flex;
+        align-items: center;
+        gap: 143px;
+
+        p {
+          color: #838383;
+          font-size: 18px;
+          margin-bottom: 32px;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 26px;
+
+          li {
+            font-size: 18px;
+            font-family: 'Raleway-SemiBold';
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .footer-contacts {
+      width: 100%;
+      height: 138px;
+      border-top: 1px solid rgba(128, 128, 128, 0.373);
+      max-width: 1352px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .footer-agreement {
+        p {
+          color: #525252;
+          font-size: 16px;
+          @extend .raleway-numerals;
+        }
+      }
+
+      .footer-details {
+        display: flex;
+        align-items: center;
+        gap: 23px;
+
+        >div {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+
+          p {
+            font-size: 16px;
+            font-family: 'Raleway-Bold';
+            @extend .raleway-numerals;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1600px) {
+  footer .footer-wrapper {
+    height: 700px;
+  }
+
+  .footer-block {
+    transform: scale(0.9);
+  }
+}
+</style>

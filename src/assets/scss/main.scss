@@ -1,5 +1,3 @@
-@import './scss/fonts.scss';
-
 *,
 *::before,
 *::after {
@@ -20,6 +18,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#app {
+  margin: 0 auto;
+  font-weight: normal;
+}
+
 ul {
   padding: 0;
 }
@@ -36,10 +39,19 @@ button {
   cursor: pointer;
 }
 
-.v-enter-active, .v-leave-active {
+.v-enter-active,
+.v-leave-active {
   transition: opacity 0.3s ease;
 }
 
-.v-enter-from, .v-leave-to {
+.v-enter-from,
+.v-leave-to {
   opacity: 0;
 }
+
+// base
+@import "./base/fonts";
+
+// utils
+@import "./utils/mixins";
+@import "./utils/utility-classes";

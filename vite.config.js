@@ -7,6 +7,12 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
+    filename: "[name]-[hash].js",
+    sourcemap: true,
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -15,5 +21,14 @@ export default defineConfig({
   server: {
     allowedHosts: [".localhost"],
     host: true,
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "./src/assets/scss/main.scss";
+        `,
+      },
+    },
   },
 })
