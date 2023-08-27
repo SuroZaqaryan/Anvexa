@@ -10,7 +10,11 @@ const showSubcontent = ref(false);
   <header>
     <div class="header-wrapper">
       <div class="header-service">
-        <div class="header-logo"><img src="@/assets/icons/logo.png" /></div>
+        <div class="header-logo">
+          <RouterLink to="/">
+            <img src="@/assets/icons/logo.png" />
+          </RouterLink>
+        </div>
 
         <nav class="header-links">
           <RouterLink to="#" @mouseover="showSubcontent = true" @mouseleave="showSubcontent = false">

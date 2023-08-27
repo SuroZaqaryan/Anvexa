@@ -95,15 +95,19 @@
 
             <div class="form-info">
               <img width="30" height="30" src="@/assets/icons/skype.svg" />
-              <a style="margin-left: 3px;" href="mailto: info@norbit.ru">Anvexa</a>
+              <a style="margin-left: 3px;" href="skype:Anvexa?userinfo">Anvexa</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="contact-location">
+      <img src="@/assets/images/map.png" />
+    </div>
   </section>
 </template>
 
 <style scoped lang="scss">
-@import "@/assets/scss/components/contacts.scss";
+@import "@/assets/scss/views/contacts.scss";
 </style>

@@ -4,6 +4,22 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <footer>
+    <div class="facilities">
+      <ul>
+        <li>Техническая поддержка сайтов</li>
+        <li>•</li>
+        <li>Доработка сайтов</li>
+        <li>•</li>
+        <li>Поддержка сайтов WordPress</li>
+        <li>•</li>
+        <li>Поддержка сайтов Битрикс</li>
+        <li>•</li>
+        <li>Поддержка сайтов на ModX</li>
+        <li>•</li>
+        <li>Поддержка сайтов на ModX</li>
+      </ul>
+    </div>
+
     <div class="footer-wrapper">
       <img class="footer-grid" src="@/assets/images/grid.png" />
 

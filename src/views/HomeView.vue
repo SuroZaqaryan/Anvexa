@@ -721,22 +721,6 @@ const selectPossibility = (idx) => {
             </div>
         </div>
     </section>
-
-    <div class="facilities">
-        <ul>
-            <li>Техническая поддержка сайтов</li>
-            <li>•</li>
-            <li>Доработка сайтов</li>
-            <li>•</li>
-            <li>Поддержка сайтов WordPress</li>
-            <li>•</li>
-            <li>Поддержка сайтов Битрикс</li>
-            <li>•</li>
-            <li>Поддержка сайтов на ModX</li>
-            <li>•</li>
-            <li>Поддержка сайтов на ModX</li>
-        </ul>
-    </div>
 </template>
 
 <style scoped>

@@ -1,10 +1,31 @@
 footer {
   position: relative;
   background-color: #E5EDED;
-  padding: 0 2rem;
+
+  .facilities {
+    width: 100%;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      height: 71px;
+      padding: 0 14px;
+      background: #000;
+
+      li {
+        font-size: 18px;
+        color: #fff;
+        font-family: 'Raleway-Bold';
+        text-align: center;
+      }
+    }
+  }
 
   .footer-wrapper {
     height: 732px;
+    padding: 0 2rem;
 
     .footer-grid {
       position: absolute;
