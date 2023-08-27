@@ -2,9 +2,6 @@
 import { ref } from 'vue'
 import { Carousel, Pagination, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
-
-import Header from '@/components/Header.vue'
-import Footer from '@/components/Footer.vue'
 import Slider from '@/components/Slider.vue'
 
 import TitleDescription from '@/components/TitleDescription.vue'
@@ -73,34 +70,6 @@ const possibilities = ref({
     ]
 })
 
-
-// const possibilities = ref([
-//     {
-//         title: "Высокая стоимость разработки",
-//         icon: new URL("@/assets/icons/possibilities-money.svg", import.meta.url).href,
-//     },
-//     {
-//         title: "Долгая реализация задач",
-//         icon: new URL("@/assets/icons/clock-forward.svg", import.meta.url).href,
-//     },
-//     {
-//         title: "Нестандартная CMS система",
-//         icon: new URL("@/assets/icons/file-branch.svg", import.meta.url).href,
-//     },
-//     {
-//         title: "Медленная реакция",
-//         icon: new URL("@/assets/icons/pulse.svg", import.meta.url).href,
-//     },
-//     {
-//         title: "Сайт работает нестабильно",
-//         icon: new URL("@/assets/icons/erratically.svg", import.meta.url).href,
-//     },
-//     {
-//         title: "Нужна доработка сайта",
-//         icon: new URL("@/assets/icons/pencil.svg", import.meta.url).href,
-//     },
-// ])
-
 const activeIdx = ref(-1)
 
 const isPhoneFocused = ref(false)
@@ -133,10 +102,6 @@ const handleBlur = (inputType) => {
     }
 }
 
-const slideTo = (val) => {
-    currentSlide.value = val
-}
-
 const selectPossibility = (idx) => {
     currentSlide.value = (idx + 1) - 1;
     activeIdx.value = idx === activeIdx.value ? -1 : idx;
@@ -144,8 +109,6 @@ const selectPossibility = (idx) => {
 </script>
 
 <template>
-    <Header />
-
     <section class="section-hero">
         <div class="hero-wrapper">
             <div class="hero-desc">
@@ -774,8 +737,6 @@ const selectPossibility = (idx) => {
             <li>Поддержка сайтов на ModX</li>
         </ul>
     </div>
-
-    <Footer />
 </template>
 
 <style scoped>
