@@ -1,13 +1,3 @@
-.raleway-numerals {
-  font-variant-numeric: lining-nums;
-  -moz-font-feature-settings: "lnum" 1;
-  -moz-font-feature-settings: "lnum=1";
-  -ms-font-feature-settings: "lnum" 1;
-  -o-font-feature-settings: "lnum" 1;
-  -webkit-font-feature-settings: "lnum" 1;
-  font-feature-settings: "lnum" 1;
-}
-
 .title-lg {
   font-family: 'Raleway-Bold';
   font-size: 56px;
@@ -73,4 +63,63 @@
 
 .pb-0 {
   padding-bottom: 0;
+}
+
+/* Fonts */
+
+.text-1xl {
+  font-family: 'Raleway-ExtraBold';
+  font-size: 68px;
+  line-height: 78px;
+  color: #000;
+}
+
+.text-2xl {
+  font-family: 'Raleway-Bold';
+  font-size: 56px;
+  line-height: 62px;
+  letter-spacing: -0.56px;
+  color: #000;
+}
+
+.text-xl {
+  font-family: 'Raleway-Bold';
+  font-size: 46px;
+  line-height: normal;
+  color: #000;
+}
+
+.text-lg {
+  font-family: 'Raleway-Bold';
+  font-size: 36px;
+  line-height: normal;
+  color: #000;
+}
+
+.text-base {
+  font-family: 'Raleway-Bold';
+  font-size: 32px;
+  line-height: normal;
+  color: #000;
+}
+
+.text-sm {
+  font-family: 'Raleway-Regular';
+  font-size: 22px;
+  line-height: normal;
+  color: #525252;
+}
+
+.text-regular {
+  font-family: 'Raleway-Bold';
+  font-size: 20px;
+  line-height: normal;
+  color: #000;
+}
+
+.text-xs {
+  font-family: 'Raleway-SemiBold';
+  font-size: 18px;
+  line-height: normal;
+  color: #000;
 }

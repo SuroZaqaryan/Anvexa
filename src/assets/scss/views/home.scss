@@ -17,19 +17,7 @@
         margin-bottom: 36px;
 
         h1 {
-          font-family: 'Raleway-ExtraBold';
-          font-size: 68px;
-          font-style: normal;
-          line-height: 78px;
-          color: #000;
           margin-bottom: 41px;
-        }
-
-        p {
-          color: #525252;
-          font-size: 22px;
-          font-style: normal;
-          line-height: 34px
         }
       }
 
@@ -446,7 +434,6 @@
 
           p {
             margin-top: 6px;
-            @extend .raleway-numerals;
           }
 
           span {
@@ -615,15 +602,7 @@
           }
 
           h3 {
-            font-size: 36px;
-            font-family: 'Raleway-Bold';
             margin-bottom: 26px;
-          }
-
-          p {
-            font-size: 22px;
-            color: #525252;
-            font-family: 'Raleway-Regular';
           }
         }
       }
@@ -759,15 +738,7 @@
           }
 
           h3 {
-            font-size: 36px;
-            font-family: 'Raleway-Bold';
             margin-bottom: 16px;
-          }
-
-          p {
-            color: #525252;
-            font-size: 22px;
-            line-height: 34px;
           }
         }
       }
@@ -836,7 +807,6 @@
           outline: none;
           font-size: 18px;
           transition: 0.2s;
-          @extend .raleway-numerals;
 
           &::placeholder {
             font-size: 18px;
@@ -967,11 +937,7 @@
 
           span,
           a {
-            font-family: 'Raleway-Bold';
-            font-size: 20px;
-            color: #000;
-            text-decoration: none;
-            @extend .raleway-numerals;
+            @extend .text-regular;
           }
         }
       }
@@ -995,10 +961,6 @@
     img {
       width: 20px;
     }
-  }
-
-  .facilities ul li {
-    font-size: 14px;
   }
 
   .section-hero .hero-wrapper .circular-text {

@@ -3,8 +3,9 @@
     <div class="contact-content">
       <div class="contact-info">
         <div class="contact-title">
-          <h2>Контактная <br /> информация</h2>
-          <p>Представлены самые популярные варианты тарифов, Спектр задач может быть расширен под ваши потребности</p>
+          <h1 class="text-1xl">Контактная <br /> информация</h1>
+          <p class="text-sm">Представлены самые популярные варианты тарифов, Спектр задач может быть расширен под ваши
+            потребности</p>
           <img class="ornament" src="@/assets/icons/ornament.svg">
         </div>
 

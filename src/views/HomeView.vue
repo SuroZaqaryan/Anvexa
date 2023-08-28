@@ -115,11 +115,11 @@ const selectPossibility = (idx) => {
                 <TitleDescription title="16 лет опыта с клиентами" />
 
                 <div class="hero-text">
-                    <h1>
+                    <h1 class="text-1xl">
                         Поддержка, <br /> обслуживание и <br /> доработка Ваших <br /> сайтов.
                     </h1>
 
-                    <p>Обеспечим работоспособность и защиту <br /> сайта. Внедрим любые обновления.</p>
+                    <p class="text-sm">Обеспечим работоспособность и защиту <br /> сайта. Внедрим любые обновления.</p>
                 </div>
 
                 <button>
@@ -553,8 +553,8 @@ const selectPossibility = (idx) => {
                                 <img src="@/assets/icons/ornament-outline.svg" />
                             </div>
 
-                            <h3>{{ slide.title }}</h3>
-                            <p>{{ slide.description }}</p>
+                            <h3 class="text-lg">{{ slide.title }}</h3>
+                            <p class="text-sm">{{ slide.description }}</p>
                         </div>
 
                         <div class="banner-bg">
@@ -600,8 +600,8 @@ const selectPossibility = (idx) => {
                                 <div class="arrow-refresh">
                                     <img src="@/assets/icons/arrow-refresh.svg" />
                                 </div>
-                                <h3>Автоматическое <br /> обнавление</h3>
-                                <p>
+                                <h3 class="text-lg">Автоматическое <br /> обнавление</h3>
+                                <p class="text-sm">
                                     Ведем ваш проект в удобной системе куда имеют доступ нужные сотрудники, ведем ваш
                                     проект в удобной системе куда имеют доступ нужные сотрудники
                                 </p>

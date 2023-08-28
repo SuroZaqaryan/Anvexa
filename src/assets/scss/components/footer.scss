@@ -15,10 +15,8 @@ footer {
       background: #000;
 
       li {
-        font-size: 18px;
+        @extend .text-xs;
         color: #fff;
-        font-family: 'Raleway-Bold';
-        text-align: center;
       }
     }
   }
@@ -45,7 +43,6 @@ footer {
 
       .footer-services {
         display: flex;
-        align-items: center;
         gap: 143px;
 
         p {
@@ -60,10 +57,7 @@ footer {
           gap: 26px;
 
           a {
-            font-size: 18px;
-            font-family: 'Raleway-SemiBold';
-            color: #000;
-            cursor: pointer;
+            @extend .text-xs;
           }
         }
       }
@@ -83,7 +77,6 @@ footer {
         p {
           color: #525252;
           font-size: 16px;
-          @extend .raleway-numerals;
         }
       }
 
@@ -100,7 +93,6 @@ footer {
           p {
             font-size: 16px;
             font-family: 'Raleway-Bold';
-            @extend .raleway-numerals;
           }
         }
       }

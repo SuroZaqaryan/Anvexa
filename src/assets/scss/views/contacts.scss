@@ -13,16 +13,7 @@
       margin-right: 4rem;
 
       .contact-title {
-        h2 {
-          font-size: 68px;
-          line-height: 78px;
-          font-family: 'Raleway-ExtraBold';
-        }
-
         p {
-          color: #525252;
-          font-size: 22px;
-          font-weight: 400;
           margin-top: 16px;
         }
 
@@ -149,7 +140,6 @@
             font-size: 20px;
             color: #000;
             text-decoration: none;
-            @extend .raleway-numerals;
           }
         }
       }

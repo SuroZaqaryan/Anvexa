@@ -307,8 +307,7 @@ const breakpointsSlider = ref({
           text-align: left;
 
           h3 {
-            font-family: 'Raleway-Bold';
-            font-size: 32px;
+            @extend .text-base;
           }
 
           p {
@@ -343,11 +342,9 @@ const breakpointsSlider = ref({
         padding: 54px 35px;
 
         p {
-          color: #1E1E1E;
-          font-family: 'Raleway-Regular';
-          font-size: 22px;
-          line-height: 40px;
+          @extend .text-sm;
           text-align: left;
+          color: #1E1E1E;
         }
       }
     }
@@ -370,7 +367,6 @@ const breakpointsSlider = ref({
         p {
           font-size: 58px;
           font-family: 'Raleway-ExtraBold';
-          @extend .raleway-numerals;
         }
 
         span {
@@ -447,4 +443,5 @@ const breakpointsSlider = ref({
       }
     }
   }
-}</style>
+}
+</style>
