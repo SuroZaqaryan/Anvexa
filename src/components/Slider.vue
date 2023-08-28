@@ -413,13 +413,13 @@ const breakpointsSlider = ref({
     }
   }
 
-  // @media screen and (max-width: 1600px) {
-  //   .carousel__viewport {
-  //     height: 983px;
-  //     display: flex;
-  //     align-items: center;
-  //   }
-  // }
+  @media screen and (max-width: 1600px) {
+    .carousel__viewport {
+      height: 983px;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 .carousel {

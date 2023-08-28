@@ -101,12 +101,12 @@ footer {
 
 }
 
-// @media screen and (max-width: 1600px) {
-//   footer .footer-wrapper {
-//     height: 700px;
-//   }
+@media screen and (max-width: 1600px) {
+  footer .footer-wrapper {
+    height: 700px;
+  }
 
-//   .footer-block {
-//     transform: scale(0.9);
-//   }
-// }
+  .footer-block {
+    transform: scale(0.9);
+  }
+}

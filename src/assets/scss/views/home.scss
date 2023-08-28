@@ -945,81 +945,81 @@
   }
 }
 
-// @media screen and (max-width: 1600px) {
+@media screen and (max-width: 1600px) {
 
-//   .seaction-publicity .publicity-wrapper,
-//   .slider-wrapper,
-//   .possibilities-wrapper {
-//     transform: scale(1);
-//   }
+  .seaction-publicity .publicity-wrapper,
+  .slider-wrapper,
+  .possibilities-wrapper {
+    transform: scale(1);
+  }
 
-//   .carousel-prev,
-//   .carousel-next {
-//     width: 56px;
-//     height: 56px;
+  .carousel-prev,
+  .carousel-next {
+    width: 56px;
+    height: 56px;
 
-//     img {
-//       width: 20px;
-//     }
-//   }
+    img {
+      width: 20px;
+    }
+  }
 
-//   .section-hero .hero-wrapper .circular-text {
-//     margin-top: 20px;
-//   }
+  .section-hero .hero-wrapper .circular-text {
+    margin-top: 20px;
+  }
 
-//   .section-possibilities .possibilities-banner .banner-block {
-//     width: 1125px;
-//   }
+  .section-possibilities .possibilities-banner .banner-block {
+    width: 1125px;
+  }
 
-//   .hero-wrapper,
-//   .publicity-images {
-//     transform: scale(0.9);
-//   }
+  .hero-wrapper,
+  .publicity-images {
+    transform: scale(0.9);
+  }
 
-//   .banner-bg,
-//   .banner-desc,
-//   .slider-statistics,
-//   .slider-description,
-//   .possibilities-title,
-//   .possibilities-list,
-//   section>div {
-//     transform: scale(0.8);
-//   }
+  .banner-bg,
+  .banner-desc,
+  .slider-statistics,
+  .slider-description,
+  .possibilities-title,
+  .possibilities-list,
+  section>div {
+    transform: scale(0.8);
+  }
 
-//   .section-possibilities .possibilities-banner .banner-block .banner-grid {
-//     bottom: -20%;
-//   }
+  .section-possibilities .possibilities-banner .banner-block .banner-grid {
+    bottom: -20%;
+  }
 
-//   .section-future {
-//     height: 390px;
-//   }
+  .section-future {
+    height: 390px;
+  }
 
-//   .section-future .future-wrapper {
-//     margin-bottom: 3rem;
-//   }
+  .section-future .future-wrapper {
+    margin-bottom: 3rem;
+  }
 
-//   .section-possibilities .possibilities-desc .possibilities-title {
-//     margin-bottom: 40px;
-//   }
+  .section-possibilities .possibilities-desc .possibilities-title {
+    margin-bottom: 40px;
+  }
 
-//   .section-form .form-wrapper {
-//     margin: 100px auto;
-//   }
+  .section-form .form-wrapper {
+    margin: 100px auto;
+  }
 
-//   .section-future .future-wrapper {
-//     padding-top: 0;
-//   }
+  .section-future .future-wrapper {
+    padding-top: 0;
+  }
 
-//   .section-possibilities {
-//     margin-top: 150px;
-//   }
+  .section-possibilities {
+    margin-top: 150px;
+  }
 
-//   .section-tariff .tariff-wrapper .tariff-message {
-//     margin-bottom: 0;
-//   }
+  .section-tariff .tariff-wrapper .tariff-message {
+    margin-bottom: 0;
+  }
 
-//   .section-tariff .tariff-wrapper,
-//   .section-services .services-wrapper {
-//     margin: auto;
-//   }
-// }
+  .section-tariff .tariff-wrapper,
+  .section-services .services-wrapper {
+    margin: auto;
+  }
+}
