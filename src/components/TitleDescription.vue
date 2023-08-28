@@ -27,6 +27,7 @@ defineProps({
   border: 1px solid #D8E3E3;
   background: #FFF;
   margin-bottom: 20px;
+  cursor: context-menu;
 
   span {
     font-family: 'Raleway-SemiBold';

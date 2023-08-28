@@ -290,10 +290,10 @@ const breakpointsSlider = ref({
           }
 
           .slider-popup {
-            border-radius: 56px;
             background: #F1E1D3;
             padding: 10px 14px;
             height: 36px;
+            border-radius: 56px;
 
             p {
               font-size: 14px;
@@ -366,13 +366,12 @@ const breakpointsSlider = ref({
 
         p {
           font-size: 58px;
-          font-family: 'Raleway-ExtraBold';
+          @extend .text-1xl;
         }
 
         span {
           color: #525252;
-          font-size: 18px;
-          line-height: 25px;
+          @extend .text-xs;
         }
       }
     }
@@ -414,13 +413,13 @@ const breakpointsSlider = ref({
     }
   }
 
-  @media screen and (max-width: 1600px) {
-    .carousel__viewport {
-      height: 983px;
-      display: flex;
-      align-items: center;
-    }
-  }
+  // @media screen and (max-width: 1600px) {
+  //   .carousel__viewport {
+  //     height: 983px;
+  //     display: flex;
+  //     align-items: center;
+  //   }
+  // }
 }
 
 .carousel {

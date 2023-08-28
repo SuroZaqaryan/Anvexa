@@ -664,10 +664,10 @@ const selectPossibility = (idx) => {
                             :placeholder="isMessageFocused ? '' : 'Сообщение'" />
                     </div>
 
-                    <div class="agreement">
-                        <input type="checkbox" @focus="handleFocus" />
+                    <label class="agreement" for="agreement">
+                        <input type="checkbox" id="agreement" @focus="handleFocus" />
                         <p>Даю согласие на обработку моих данных</p>
-                    </div>
+                    </label>
 
                     <button type="submit">
                         Отправить
@@ -761,13 +761,13 @@ const selectPossibility = (idx) => {
         }
     }
 
-    @media screen and (max-width: 1600px) {
-        .carousel__viewport {
-            height: 983px;
-            display: flex;
-            align-items: center;
-        }
-    }
+    // @media screen and (max-width: 1600px) {
+    //     .carousel__viewport {
+    //         height: 983px;
+    //         display: flex;
+    //         align-items: center;
+    //     }
+    // }
 }
 
 .carousel {
